@@ -1,0 +1,306 @@
+@charset "utf-8";
+
+* {
+  font-family: 'Noto Sans', 'Noto Sans JP', sans-serif;
+  font-size: 100%;
+}
+
+body {
+  font-size: .875rem;
+}
+
+main {
+  max-width: 1200px;
+  padding: 0 16px 140px;
+  margin: 0 auto;
+}
+
+/* ヘッダー */
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #fff;
+}
+
+.logo-cont {
+  max-width: 1200px;
+  padding: 20px 16px;
+  margin: 0 auto;
+}
+
+.nav-cont {
+  background-color: #333;
+  color: #fff;
+}
+
+.nav-cont nav {
+  max-width: 1200px;
+  padding: 14px 16px;
+  margin: 0 auto;
+}
+
+.nav-cont ul {
+  display: flex;
+}
+
+.nav-cont li:not(:last-child) {
+  margin-right: 60px;
+}
+
+/* メインエリア */
+
+main {
+  margin-top: 150px;
+}
+
+/* s-articles-contsセクション */
+
+.s-articles-cont {
+  display: flex;
+  margin: 0 0 80px 0;
+}
+
+.s-article {
+  flex: 1;
+}
+
+.s-article:not(:last-child) {
+  margin-right: 2%;
+}
+
+.s-article-img {
+  width: 100%;
+}
+
+.s-article-title {
+  padding: 16px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.rm-link {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}
+
+.rm-link::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  display: block;
+  background: #000;
+  position: relative;
+  top: 2px;
+  transition: top 0.3s, opacity 0.3s;
+}
+
+.rm-link:hover::after {
+  top: 6px;
+  opacity: 0;
+}
+
+/* 2カラムエリア */
+
+.two-column-cont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* l-articles-contセクション */
+
+.l-articles-cont {
+  width: 65%;
+}
+
+.l-article {
+  margin: 0 0 80px 0;
+}
+
+.l-article-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 16px;
+}
+
+.l-article-img {
+  width: 100%;
+}
+
+.l-article-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+time {
+  display: inline-block;
+  padding: 0 16px 12px 0;
+}
+
+.l-article-text {
+  padding: 20px 40px 40px;
+}
+
+/* asideエリア */
+
+aside {
+  width: 33%;
+  padding: 0 20px;
+}
+
+aside p {
+  line-height: 1.2rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* profileセクション */
+
+.profile {
+  margin: 0 0 30px 0;
+}
+
+.profile-img {
+  display: block;
+  width: 130px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.r-article-img {
+  width: 100%;
+}
+
+/* rankingセクション */
+
+.r-article {
+  margin: 0 0 24px 0
+}
+
+.r-article-title {
+  padding: 6px 0;
+}
+
+/* archiveセクション */
+
+.archive-li {
+  padding: 24px 0 24px 20px;
+  border-top: 1px solid #000;
+}
+
+.archive-li:last-child {
+  border-bottom: 1px solid #000;
+}
+
+/* フッター */
+
+footer {
+  background: #f7f7f7;
+  width: 100%;
+  padding: 16px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 65px;
+}
+
+.footer-inner h3 {
+  text-align: left;
+}
+
+.about,
+.menu,
+.twitter {
+  flex: 1;
+}
+
+.about,
+.menu {
+  margin-right: 5%;
+}
+
+.about-text {
+  line-height: 1.25rem;
+  margin-bottom: 24px;
+}
+
+.about-li {
+  margin-bottom: 8px;
+}
+
+.about-li::before {
+  content: "▶";
+  font-size: 0.6rem;
+  margin-right: 5px;
+}
+
+.menu-li {
+  padding: 20px 0 20px 16px;
+  border-top: 1px solid #000;
+}
+
+.menu-li:last-child {
+  border-bottom: 1px solid #000;
+}
+
+small {
+  display: block;
+  text-align: center;
+}
+
+/********************
+    レスポンシブ対応
+ ********************/
+
+@media (max-width:767px) {
+
+  .nav-cont {
+    overflow-x: scroll;
+  }
+
+  .s-articles-cont {
+    display: block;
+    margin: 0 0 100px 0;
+  }
+
+  .s-article:not(:last-child) {
+    flex: 1;
+    margin-right: 0;
+  }
+
+  .s-article:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  main {
+    padding: 0 16px 124px;
+  }
+
+  .two-column-cont {
+    display: block;
+  }
+
+  .l-articles-cont,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-inner {
+    display: block;
+    margin: 0 auto 95px;
+  }
+
+}
